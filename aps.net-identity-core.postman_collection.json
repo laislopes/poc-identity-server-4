@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "e4d316ec-682b-4f2b-bbb9-26c3d69073cc",
+		"name": "aps.net-identity-core",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetUser",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"name": "Content-Type",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImVVRklOYnNSVWZ4TmlFbldrNF9GcGciLCJ0eXAiOiJhdCtqd3QifQ.eyJuYmYiOjE1ODI2ODI0NDQsImV4cCI6MTU4MjY4NjA0NCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMSIsImF1ZCI6ImFwaTEiLCJjbGllbnRfaWQiOiJjbGllbnQiLCJzY29wZSI6WyJhcGkxIl19.v0Y0xm8F-y7IUSbdygsMo8-RyqF5lMgnw9j90r2vJ9GaVh5RRtRGfDK0PcS1gwTfTqh139S9hyya3jqTUAzuHlrM9rWR_P5eZwRiTeaY1eQTpDysFOPNHeQLP_IyPDqm77PMokvRQUGYEldrhqqbc97ozMIINTvCHDIaxMhOHpxYRsEHh3GzSYsA0rXWlsRfm8Vh6Kzr26pOl2nOswzUjCgWy8yaIOejlKbRdYGZJMjrJ9vPoZcSz-OSTbODw6OqemFRZ3e150vsQUyh7rgWo1QuUgWXly7ZOVGVw-t6_WVQtz8MKBHLSGpHEJBGjoHtyAzROHbQNd3Nz_B6C9b-8Q",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImVVRklOYnNSVWZ4TmlFbldrNF9GcGciLCJ0eXAiOiJhdCtqd3QifQ.eyJuYmYiOjE1ODI2ODI0NDQsImV4cCI6MTU4MjY4NjA0NCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NTAwMSIsImF1ZCI6ImFwaTEiLCJjbGllbnRfaWQiOiJjbGllbnQiLCJzY29wZSI6WyJhcGkxIl19.v0Y0xm8F-y7IUSbdygsMo8-RyqF5lMgnw9j90r2vJ9GaVh5RRtRGfDK0PcS1gwTfTqh139S9hyya3jqTUAzuHlrM9rWR_P5eZwRiTeaY1eQTpDysFOPNHeQLP_IyPDqm77PMokvRQUGYEldrhqqbc97ozMIINTvCHDIaxMhOHpxYRsEHh3GzSYsA0rXWlsRfm8Vh6Kzr26pOl2nOswzUjCgWy8yaIOejlKbRdYGZJMjrJ9vPoZcSz-OSTbODw6OqemFRZ3e150vsQUyh7rgWo1QuUgWXly7ZOVGVw-t6_WVQtz8MKBHLSGpHEJBGjoHtyAzROHbQNd3Nz_B6C9b-8Q"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:6001/api/auth",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6001",
+					"path": [
+						"api",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "client",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "api1",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "secret",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:5001/connect/token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register-User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "client",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "api1",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "secret",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:5001/connect/token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
