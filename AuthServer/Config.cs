@@ -1,6 +1,8 @@
-﻿using IdentityServer4.Models;
+﻿using IdentityModel;
+using IdentityServer4.Models;
 using IdentityServer4.Test;
 using System.Collections.Generic;
+using System.Security.Claims;
 
 namespace AuthServer
 {
@@ -14,13 +16,21 @@ namespace AuthServer
         {
             SubjectId = "1",
             Username = "alice",
-            Password = "password"
+            Password = "password",
+            Claims = new List<Claim>()
+            {
+                new Claim("username", "alice")
+            }
         },
         new TestUser
         {
             SubjectId = "2",
             Username = "bob",
-            Password = "password"
+            Password = "password",
+            Claims = new List<Claim>()
+            {
+                new Claim("username", "alice")
+            }
         }
     };
         }
@@ -47,7 +57,10 @@ namespace AuthServer
                 {
                     new Secret("secret".Sha256())
                 },
-                AllowedScopes = { "api1" }
+                AllowedScopes = { "api1" },
+                AlwaysIncludeUserClaimsInIdToken = true,
+                AlwaysSendClientClaims = true
+
             }
         };
         }
@@ -56,9 +69,19 @@ namespace AuthServer
         public static IEnumerable<ApiResource> GetApiResources()
         {
             return new List<ApiResource>
-        {
-            new ApiResource("api1", "My Api")
-        };
+            {
+
+                new ApiResource("api1", "My Api")
+                {
+                    UserClaims = {
+                        JwtClaimTypes.Email,
+                        JwtClaimTypes.PhoneNumber,
+                        JwtClaimTypes.GivenName,
+                        JwtClaimTypes.FamilyName,
+                        JwtClaimTypes.PreferredUserName
+                    }
+                }
+            };
         }
     }
 }

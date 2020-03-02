@@ -21,8 +21,7 @@ namespace ProtectedApi.Config
     {
         protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, MyRequirement requirement)
         {
-            var redirectContext = context.Resource as AuthorizationFilterContext;
-            var user = redirectContext.HttpContext.User;
+            var user = context.User;
             if (requirement.HasPermission(user))
                 context.Succeed(requirement);
             else

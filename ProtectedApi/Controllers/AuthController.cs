@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 namespace ProtectedApi.Controllers
 {
     [Route("api/[controller]")]
-    //[Authorize(Policy = "AuthorizationPolicy")]
-    [Authorize]
+    [Authorize(Policy = "AuthorizationPolicy")]
 
     public class AuthController : ControllerBase
     {

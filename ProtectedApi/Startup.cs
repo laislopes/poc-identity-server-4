@@ -25,7 +25,7 @@ namespace ProtectedApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services
+            services.AddSingleton<IAuthorizationHandler, AuthorizationHandler>()
                     .AddAuthorization(GetAuthorizationConfig())
                     .AddAuthentication(GetAuthenticationConfig())
                     .AddJwtBearer(GetJwtConfig());
@@ -60,7 +60,7 @@ namespace ProtectedApi
         {
             return jwtBearerOptions =>
             {
-                jwtBearerOptions.Authority = "https://localhost:5001";
+                jwtBearerOptions.Authority = "https://localhost:44347/";
                 jwtBearerOptions.Audience = "api1";
                 jwtBearerOptions.TokenValidationParameters = new TokenValidationParameters
                 {
