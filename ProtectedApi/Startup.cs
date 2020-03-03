@@ -60,7 +60,7 @@ namespace ProtectedApi
         {
             return jwtBearerOptions =>
             {
-                jwtBearerOptions.Authority = "https://localhost:44347/";
+                jwtBearerOptions.Authority = "https://localhost:44377/";
                 jwtBearerOptions.Audience = "api1";
                 jwtBearerOptions.TokenValidationParameters = new TokenValidationParameters
                 {

@@ -22,6 +22,7 @@ namespace ProtectedApi.Config
         protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, MyRequirement requirement)
         {
             var user = context.User;
+            var name = user.Identities;
             if (requirement.HasPermission(user))
                 context.Succeed(requirement);
             else
