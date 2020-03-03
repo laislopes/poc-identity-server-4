@@ -8,14 +8,16 @@ namespace Domain.Entities
     {
         public int Id { get; set; }
         public string Nome { get; set; }
+        public ICollection<Profile_Event> Events { get; set; }
 
         public Profile()
         {
 
         }
 
-
-
-
+        public Profile(string nome)
+        {
+            Nome = nome;
+        }
     }
 }
