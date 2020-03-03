@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProtectedApi", "ProtectedAp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Migrator", "Migrator\Migrator.csproj", "{A519FFBF-C296-4BA4-8332-26AE2665F207}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra", "Infra\Infra.csproj", "{AA332BC7-9133-4A9F-9240-BCDFEDE5289E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{13D6974D-7566-4707-8EA7-DED2F7886D81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{A519FFBF-C296-4BA4-8332-26AE2665F207}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A519FFBF-C296-4BA4-8332-26AE2665F207}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A519FFBF-C296-4BA4-8332-26AE2665F207}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA332BC7-9133-4A9F-9240-BCDFEDE5289E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA332BC7-9133-4A9F-9240-BCDFEDE5289E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA332BC7-9133-4A9F-9240-BCDFEDE5289E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA332BC7-9133-4A9F-9240-BCDFEDE5289E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13D6974D-7566-4707-8EA7-DED2F7886D81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13D6974D-7566-4707-8EA7-DED2F7886D81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13D6974D-7566-4707-8EA7-DED2F7886D81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13D6974D-7566-4707-8EA7-DED2F7886D81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
